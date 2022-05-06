@@ -137,9 +137,11 @@ public class FamilyTree
 	private void addLine(String line) throws TreeException
 	{
 		// Extract parent and array of children.
-		int colonIndex = ?? should be the index of the colon in line.
+		int colonIndex = line.indexOf(":"); //should be the index of the colon in line.
 		if (colonIndex < 0)
-			?? throw a TreeException with a useful message
+		{
+			throw TreeException "Invalid";
+		}
 		String parent = ?? The substring of line that starts at char #0 and ends just before colonIndex. Check the API for 
 				           class java.util.String, method substring(), if you need guidance.
 		String childrenString = ?? The substring of line that starts just after colonIndex and goes through the end of
